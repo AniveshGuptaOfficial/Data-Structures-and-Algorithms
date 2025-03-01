@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "Karatsuba faster integer multiplicationAlgorithm.C": "cpp",
+        "KaratsubaFasterIntegerMultiplicationAlgorithm.C": "cpp",
+        "MaximumSubarrayProblem.C": "cpp"
+    }
+}
