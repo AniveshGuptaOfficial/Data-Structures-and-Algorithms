@@ -12,9 +12,9 @@ void printParenthesis(int i, int j, int n, int s[n][n], char *name) {
 }
 void matrixChainOrder(int p[], int n) {
     int m[n][n], s[n][n];
-    for (int i = 1; i <= n; i++) m[i][i] = 0;
-    for (int l = 2; l <= n; l++) {
-        for (int i = 1; i <= n - l + 1; i++) {
+    for (int i = 1; i < n; i++) m[i][i] = 0;
+    for (int l = 2; l < n; l++) {
+        for (int i = 1; i < n - l + 1; i++) {
             int j = i + l - 1;
             m[i][j] = INT_MAX;
             for (int k = i; k < j; k++) {
@@ -26,7 +26,7 @@ void matrixChainOrder(int p[], int n) {
             }
         }
     }
-    printf("\nMinimum number of multiplications: %d\n", m[1][n-1]);
+    printf("\nMinimum number of multiplications: %d\n", m[1][n - 1]);
     printf("Optimal Parenthesization: ");
     char name = 'A';
     printParenthesis(1, n - 1, n, s, &name);

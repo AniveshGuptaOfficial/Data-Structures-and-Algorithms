@@ -14,7 +14,7 @@ void padZeros(char *num1, char *num2) {
     int maxLen = len1 > len2 ? len1 : len2;
     int newLen = nextPowerOfTwo(maxLen);
     while (strlen(num1) < newLen) {
-        memmove(num1 + 1, num1, strlen(num1) + 1); 
+        memmove(num1 + 1, num1, strlen(num1) + 1);
         num1[0] = '0';
     }
     while (strlen(num2) < newLen) {
